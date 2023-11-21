@@ -11,7 +11,7 @@ export default function Search({ navigation }) {
 
   return (
     <ImageBackground
-    source={require('../assets/junglebg1.png')}
+    source={require('../assets/JungleBg.gif')}
     style={styles.SearchContainer}>
       <View style={styles.SearchBar}>
         <Icon name='search-outline' style={styles.searchIcon} />
