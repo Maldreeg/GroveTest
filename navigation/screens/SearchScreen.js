@@ -13,10 +13,10 @@ export default function Search({ navigation }) {
     <ImageBackground
     source={require('../assets/JungleBg.gif')}
     style={styles.SearchContainer}>
-      <View style={styles.SearchBar}>
+      <View style={[styles.SearchBar, styles.shadow]}>
         <Icon name='search-outline' style={styles.searchIcon} />
         <TextInput
-          style={{ flex: 1, margin: 10, marginLeft: 5, fontSize: 16 }}
+          style={{ flex: 1, margin: 10, marginLeft: 5, fontSize: 16,}}
           placeholder='Search'
           value={searchText}
           onChangeText={(text) => setSearchText(text)}
@@ -88,4 +88,15 @@ const styles = StyleSheet.create({
     height: 33,
     left: 20,
   },
+  //Shadow Effect ;3
+    shadow:{
+        shadowColor: '#7F5F0',
+        shadowOffset:{
+          width: 0,
+          height: 10,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.5,
+        elevation: 5
+      }
 });

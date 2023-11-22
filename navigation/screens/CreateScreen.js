@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {View, StyleSheet, TextInput, TouchableOpacity, Text, ImageBackground, ScrollView } from 'react-native';
 
+
 export default function Create({ navigation }) {
     return (
         <ImageBackground
@@ -40,6 +41,13 @@ export default function Create({ navigation }) {
                     placeholder="Choose Specialization"
                 />
             </View>
+
+            
+            <TouchableOpacity style={[styles.CreateButton, styles.shadow]}>
+                <Text style={styles.CreateText}>Create</Text>
+            </TouchableOpacity>  
+
+
 
         </ImageBackground>
         );
@@ -83,5 +91,34 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         paddingVertical: 5 
     },
+    CreateButton: {
+        top: 100,
+        width: 120,
+        height: 40,
+        alignSelf: 'flex-end',
+        right: 15,
+        padding: 10,
+        backgroundColor: '#ECE3CE',
+        alignItems: 'center',
+        borderRadius: 20,
+      },
+      CreateText: {
+        color: '#739072',
+        textAlign: 'center',
+      },
+      
+
+
+    //Shadow Effect ;3
+    shadow:{
+        shadowColor: '#7F5F0',
+        shadowOffset:{
+          width: 0,
+          height: 10,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.5,
+        elevation: 5
+      }
 })
 
