@@ -43,10 +43,9 @@ export default function Create({ navigation }) {
             </View>
 
             
-            <TouchableOpacity style={[styles.CreateButton, styles.shadow]}>
+            <TouchableOpacity style={[styles.CreateButton, styles.shadow] }>
                 <Text style={styles.CreateText}>Create</Text>
             </TouchableOpacity>  
-
 
 
         </ImageBackground>

@@ -1,9 +1,12 @@
 import * as React from 'react';
-import { StyleSheet, ScrollView, View, Text, SafeAreaView, Image } from 'react-native';
+import { StyleSheet, ScrollView, View, Text, SafeAreaView, Image, ImageBackground } from 'react-native';
 
 export default function ProfileScreen({ navigation }) {
     return (
-        <SafeAreaView style={styles.ProfileContainer}>
+      <ImageBackground
+            source={require('../assets/JungleBg.gif')}
+            style={styles.CreateContainer}>
+
           <ScrollView showsVerticalScrollIndicator={false}>
             <View style={styles.ProfileTitleBar}>
             </View>
@@ -16,21 +19,24 @@ export default function ProfileScreen({ navigation }) {
             </View>
     
             <View style={styles.profileInfo}>
-              <Text style = {[styles.Username,{fontWeight: 200,fontSize:26}]}>Vhilly Manalansang</Text>
-              <Text style = {[styles.Username,{color:'#AEB5BC',fontSize:12}]}>manalansang.vhilly@ue.edu.ph</Text>
+
+              <Text style = {[styles.Username,{fontWeight: 200,fontSize:26}]}>Guest</Text>
+              <Text style = {[styles.Username,{color:'#FFFFFF',fontSize:12}]}>youareguest@ue.edu.ph</Text>
               
             </View>
          
           </ScrollView>
-        </SafeAreaView>
-      );
+      </ImageBackground>
+    );
 }
 
 const styles = StyleSheet.create({
     //profilecontainer
-    ProfileContainer:{
-        flex:1,
-        backgroundColor:'#fff'
+
+    CreateContainer: {
+      flex: 1,
+      justifyContent: 'flex-start',
+      resizeMode: 'cover'
     },
     ProfileTitleBar:{
         flexDirection:'row',

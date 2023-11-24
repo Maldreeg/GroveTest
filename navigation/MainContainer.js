@@ -21,6 +21,7 @@ const profileName = "Profile";
 const searchName = "Search"
 const signInName = "SignIn";
 const mainName = "Main";
+const addcardName = "Add Card";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
