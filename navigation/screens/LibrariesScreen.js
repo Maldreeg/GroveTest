@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
+import { View, StyleSheet, TextInput, TouchableOpacity, Text, ImageBackground } from 'react-native';
 
 export default function LibrariesScreen({ navigation }) {
     return (
+        
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
             <Text
                 onPress={() => navigation.navigate('Home')}

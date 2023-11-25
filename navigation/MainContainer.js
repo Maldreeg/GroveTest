@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
+import { StyleSheet, View, Image, TouchableOpacity} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
-import Ionicons from 'react-native-vector-icons/Ionicons';
+
 
 //Screens
 import HomeScreen from './screens/HomeScreen';
@@ -12,6 +12,8 @@ import LibrariesScreen from './screens/LibrariesScreen';
 import CreateScreen from './screens/CreateScreen';
 import SearchScreen from './screens/SearchScreen';
 import SignInScreen from './screens/SignInScreen';
+import AddCardScreen from './screens/AddCardScreen';
+
 
 // Screen Names
 const homeName = "Home";
@@ -21,7 +23,8 @@ const profileName = "Profile";
 const searchName = "Search"
 const signInName = "SignIn";
 const mainName = "Main";
-const addcardName = "Add Card";
+const addcardName = "Add Card"
+
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -162,6 +165,7 @@ export default function MainContainer() {
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name={signInName} component={SignInScreen} />
         <Stack.Screen name={mainName} component={MainTabNavigator} />
+        <Stack.Screen name={addcardName} component={AddCardScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

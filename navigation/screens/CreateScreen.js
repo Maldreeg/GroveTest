@@ -1,8 +1,19 @@
 import * as React from 'react';
-import {View, StyleSheet, TextInput, TouchableOpacity, Text, ImageBackground, ScrollView } from 'react-native';
+import {View, StyleSheet, TextInput, TouchableOpacity, Text, ImageBackground} from 'react-native';
+import { createStackNavigator } from '@react-navigation/stack';
 
+//Add Create Screen
+import AddCardScreen from './AddCardScreen';
+
+const Stack = createStackNavigator();
 
 export default function Create({ navigation }) {
+
+    // Function to navigate to AddCardScreen
+    const navigateToAddCardScreen = () => {
+        navigation.navigate('Add Card');
+    };
+
     return (
         <ImageBackground
             source={require('../assets/JungleBg.gif')}
@@ -43,7 +54,7 @@ export default function Create({ navigation }) {
             </View>
 
             
-            <TouchableOpacity style={[styles.CreateButton, styles.shadow] }>
+            <TouchableOpacity style={[styles.CreateButton, styles.shadow]} onPress={navigateToAddCardScreen}>
                 <Text style={styles.CreateText}>Create</Text>
             </TouchableOpacity>  
 

@@ -1,3 +1,110 @@
-import * as React from 'react';
-import { View, Text } from 'react-native';
+import React from 'react';
+import {  View, StyleSheet, TextInput, TouchableOpacity, Text, ImageBackground, Pressable, Image, Button } from 'react-native';
 
+const AddCardScreen = () => {
+    return (
+        <ImageBackground
+            source={require('../assets/GradientBg.png')}
+            style={styles.container}>
+
+            <View style={[styles.rectangleView, styles.shadow]}>
+                <Pressable style={styles.back}>
+                    <Image style={styles.icon} source={require("../assets/back.png")}/>
+                </Pressable>
+                <Text style={styles.l1}>Add Cards</Text>
+            </View>
+
+            <View style={[styles.c1]}>
+                <Text style={styles.l2}>ADD QUESTION</Text>
+                <Text style={styles.l3}>Question</Text>
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Question"
+                        placeholderTextColor={'rgba(31, 39, 30, 0.4)'}
+                    />
+                <Text style={styles.l4}>Answer</Text>
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Answer"
+                        placeholderTextColor={'rgba(31, 39, 30, 0.4)'}
+                    />
+
+                <Button title='CREATE'/>
+            </View>
+        </ImageBackground>
+    );
+};
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      justifyContent: 'center',
+      resizeMode: 'cover',
+    },
+    rectangleView: {
+      backgroundColor: "#ece3ce",
+      borderStyle: "solid",
+      borderColor: "rgba(31, 39, 30, 0)",
+      borderBottomWidth: 1,
+      width: "100%",
+      height: 90,
+      paddingTop: 40,
+      padding: 15,
+      flexDirection: 'row',
+      position: 'absolute', 
+      top: 0, 
+      zIndex: 1,
+    },
+    icon: {
+      height: 37,
+      width: 25,
+    },
+    back: {
+      height: 50,
+      marginRight: 20,
+    },
+    l1: {
+      fontSize: 22,
+      color: '#00AD7C',
+    },
+    c1: {
+      justifyContent: 'center',
+      alignItems: 'center',
+      alignSelf: 'center',
+      height: 400,
+      width: 300,
+      backgroundColor: "#ece3ce",
+      borderRadius: 15,
+      borderWidth: 1,
+      borderColor: 'red'
+    },
+    l2: {
+      borderBottomWidth: 1,
+      borderBottomColor: 'grey'
+    },
+    input:{
+      width: 250,
+      height: 40,
+      borderColor: 'rgba(31, 39, 30, 0.4)',
+      borderBottomWidth: 1,
+      borderBottomColor: 'grey',
+      marginBottom: 16,
+      padding: 8,
+      color: '#3A4D39'
+    },
+
+  
+    // Shadow Effect ;3
+    shadow: {
+      shadowColor: '#7F5F0',
+      shadowOffset: {
+        width: 0,
+        height: 10,
+      },
+      shadowOpacity: 0.25,
+      shadowRadius: 3.5,
+      elevation: 5,
+    },
+  });
+  
+
+export default AddCardScreen;
